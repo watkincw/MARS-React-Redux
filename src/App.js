@@ -13,7 +13,6 @@ function App() {
 			<h1>Counter: {counter}</h1>
 			<button onClick={() => dispatch(increment())}>increment</button> <br />
 			<button onClick={() => dispatch(decrement())}>decrement</button>
-			<input type='radio' onChange={() => dispatch(increment())} />
 		</div>
 	);
 }
