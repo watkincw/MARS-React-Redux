@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { useSelector } from 'react-redux';
+import { increment } from './action/CounterAction';
+import { decrement } from './action/CounterAction';
+import { useDispatch } from 'react-redux';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const counter = useSelector(state => state);
+	const dispatch = useDispatch();
+	return (
+		<div className="App">
+			<h1>Counter: {counter}</h1>
+			<button onClick={() => dispatch(increment())}>increment</button> <br />
+			<button onClick={() => dispatch(decrement())}>decrement</button>
+			<input type='radio' onChange={() => dispatch(increment())} />
+		</div>
+	);
 }
 
 export default App;
