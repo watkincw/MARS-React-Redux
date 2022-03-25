@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { createStore } from 'redux';
-import counterReducer from './reducer/CounterReducer';
+// import counterReducer from './reducer/CounterReducer';
+import ColorReducer from './reducer/ColorReducer';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 
-const store = createStore(counterReducer);
+const store = createStore(ColorReducer);
 console.log('Store Created!');
 
 ReactDOM.render(
