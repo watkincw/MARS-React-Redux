@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MARS-React-Redux/static/css/main.073c9b0a.css",
+    "main.js": "/MARS-React-Redux/static/js/main.f626356b.js",
+    "static/js/787.e0a67f80.chunk.js": "/MARS-React-Redux/static/js/787.e0a67f80.chunk.js",
+    "index.html": "/MARS-React-Redux/index.html",
+    "main.073c9b0a.css.map": "/MARS-React-Redux/static/css/main.073c9b0a.css.map",
+    "main.f626356b.js.map": "/MARS-React-Redux/static/js/main.f626356b.js.map",
+    "787.e0a67f80.chunk.js.map": "/MARS-React-Redux/static/js/787.e0a67f80.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.f626356b.js"
+  ]
+}
