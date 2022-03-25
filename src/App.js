@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 // import { connect } from 'react-redux';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -12,22 +12,26 @@ function App(props) {
 
 	const dispatch = useDispatch();
 	const colorVal = useSelector(state => state.color);
+	// console.log(state.color);
 
-	useEffect(() => {
-		console.log(props);
-	});
+	// useEffect(() => {
+	// 	console.log(props);
+	// });
 
 	const handleChange = (e) => {
-		// 'CHANGE_COLOR' - Maybe, change 'CHANGE_COLOR' to 'ADD_COLOR'
-		dispatch({
-			type: 'CHANGE_COLOR',
-			payload: e.target.value
-		});
-		// // 'REMOVE_COLOR'
-		// dispatch({
-		// 	type: 'REMOVE_COLOR',
-		// 	payload: e.target.value
-		// });
+		if (e.target.checked) {
+			// 'ADD_COLOR'
+			dispatch({
+				type: 'ADD_COLOR',
+				payload: e.target.value
+			})
+		} else {
+			// 'REMOVE_COLOR'
+			dispatch({
+				type: 'REMOVE_COLOR',
+				payload: e.target.value
+			})
+		};
 	}
 
 
@@ -37,15 +41,19 @@ function App(props) {
 			{/* <button onClick={() => dispatch(increment())}>increment</button> <br /> */}
 			{/* <button onClick={() => dispatch(decrement())}>decrement</button> <br /> */}
 
-			<h1>Color: {colorVal}</h1>
+			<h1>Color(s): {colorVal}</h1>
 			{/* checkbox version */}
-			{/* <input type='checkbox' name='color' value='Red' onClick={handleChange} />Red */}
-			{/* <input type='checkbox' name='color' value='Blue' onClick={handleChange} />Blue */}
+			<input type='checkbox' name='color' value='Red' onClick={handleChange} />Red
+			<input type='checkbox' name='color' value='Blue' onClick={handleChange} />Blue
+			<input type='checkbox' name='color' value='Green' onClick={handleChange} />Green
+			<input type='checkbox' name='color' value='Purple' onClick={handleChange} />Purple
+			<br />
+			<h3>Watch the console as you adjust checkbox states. The colors do not display properly, but the console displays the data correctly.</h3>
 			{/* radio version */}
-			<input type='radio' name='color' value='Red' onClick={handleChange} />Red
-			<input type='radio' name='color' value='Blue' onClick={handleChange} />Blue
-			<input type='radio' name='color' value='Green' onClick={handleChange} />Green
-			<input type='radio' name='color' value='Purple' onClick={handleChange} />Purple
+			{/* <input type='radio' name='color' value='Red' onClick={handleChange} />Red */}
+			{/* <input type='radio' name='color' value='Blue' onClick={handleChange} />Blue */}
+			{/* <input type='radio' name='color' value='Green' onClick={handleChange} />Green */}
+			{/* <input type='radio' name='color' value='Purple' onClick={handleChange} />Purple */}
 		</div>
 	);
 }
