@@ -8,9 +8,10 @@ import ColorReducer from './reducer/ColorReducer';
 import { Provider } from 'react-redux';
 import { myLogger } from './middleware/myLogger';
 import { myLogger2 } from './middleware/myLogger2';
+import logger from 'redux-logger';
 import reportWebVitals from './reportWebVitals';
 
-const store = createStore(ColorReducer, applyMiddleware(myLogger, myLogger2));
+const store = createStore(ColorReducer, applyMiddleware(myLogger, myLogger2, logger));
 console.log('Store Created!');
 
 ReactDOM.render(
