@@ -18,6 +18,9 @@ function App(props) {
 	// 	console.log(props);
 	// });
 
+	// // This was here to help understand why the page was not being updated on select of new colors
+	// console.log('Outside of handle change: ', colorVal);
+
 	const handleChange = (e) => {
 		if (e.target.checked) {
 			// 'ADD_COLOR'
