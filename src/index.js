@@ -5,16 +5,17 @@ import './index.css';
 import { applyMiddleware, createStore } from 'redux';
 // import counterReducer from './reducer/CounterReducer';
 // import ColorReducer from './reducer/ColorReducer';
+import postReducer from './reducer/PostReducer';
 import { Provider } from 'react-redux';
+import Posts from './components/Posts';
+// import logger from 'redux-logger';
 // import { myLogger } from './middleware/myLogger';
 // import { myLogger2 } from './middleware/myLogger2';
-// import logger from 'redux-logger';
-import postReducer from './reducer/postReducer';
+import thunk from 'redux-thunk';
 import reportWebVitals from './reportWebVitals';
-import Posts from './components/Posts';
 
 // const store = createStore(ColorReducer, applyMiddleware(myLogger, myLogger2, logger));
-const store = createStore(postReducer);
+const store = createStore(postReducer, applyMiddleware(thunk));
 console.log('Store Created!');
 
 ReactDOM.render(

@@ -1,6 +1,7 @@
 const initialState = [];
-const postReducer = (state = initialState, action) => {
+const PostReducer = (state = initialState, action) => {
+    state = action.payload;
     return state;
 }
 
-export default postReducer;
+export default PostReducer;
