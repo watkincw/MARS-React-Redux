@@ -1,3 +1,6 @@
+### WARNING:
+ !!! This project DOES NOT follow best practices for index.js and App.js files !!! 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
