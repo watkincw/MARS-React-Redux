@@ -1,4 +1,4 @@
 export const myLogger2 = store => next => action => {
-    console.log('Inside second middleware...');
+    console.log('Second middleware Ran...');
     next(action);
 }
