@@ -1,5 +1,5 @@
 ### WARNING:
- !!! This project DOES NOT follow best practices for index.js and App.js files !!! 
+ !!! This project DOES NOT follow best practices for index.js and App.js files !!! The files are also very messy. This project does not represent how I would normally structure/layout a React project. !!! 
 
 # Getting Started with Create React App
 
